@@ -1,0 +1,51 @@
+Definition of Process:
+    - A program in execution is known as process.
+
+States of a Process:
+    - New State: when the process has been created and moved from the harddisk to ram
+    - Ready State: when the process is in the ram and it is neither using IO operations nor being executed by the cpu.
+    - Running State: when the process is being executed by the cpu.
+    - I/O State: if the process is in ram and performing some I/O events. This state is also called as blocked state.
+    - Terminated State: when the process finishes its execution, it reaches terminated state. When a process reaches terminated state, it is removed from ram.
+    - Suspend Ready State:
+    - Suspend Wait State:
+
+Degree of Multi-Programming:
+    - Maximum number of processes can be placed in the ram.
+
+Concurrent Processing vs Parallel Processing:
+    - Concurrent processing: if we have one cpu and keep changing the processes as well as keep the cpu running, we call it concurrent processing. In this processing, the cpu runs one process at a time and then switches to another process.
+    - Parallel Processing: Here, we may have more than one cpu and the cpu can run multiple processes simultaneously.
+
+Types of Operating Systems:
+    - Batch OS: in this OS, the degree of multi-programming is always one; which implies at most only one program can run at a time. The number of CPU is also one for this OS.
+    - Multiprogramming OS:  in this OS, the number of programs inside the ram can be more than one. That is, the OS can run more than one program. But the processing is concurrent, not parallel. However, the number of CPUs is always one in this OS.
+    - Multiprocessing OS: Here, the OS can run multiple programs simultaneously using multi-processing technique. Hence, the number of CPU can be more than one for this OS.
+
+Passive Entity & Active Entity:
+    - passive Entity: The program for which a process is created.
+    - active Entity: The process which is created of a program.
+
+Process Control Block:
+    - for each process, there is a process control block or PCB.
+    - PCB of a process:
+        - stack: memory used to keep track of the function calls.
+        - heap: memory used for dynamic memory allocation.
+        - Data port: It contains global and static variables
+        - Code port: It contains the program itself.
+Process Attributes:
+    - Process ID: unique process Identifier
+    - Program Counter: line of program from where the execution should start.
+    - Process State: The state which the process itself currently in.
+    - General Purpose Registers: remembers the register values which were used by the process itself.
+    - Priority: priority of the process set by the scheduler.
+    - List of Open Files: The files which were opened by the process; they should also be remembered.
+    - List of Open Devices: The devices which were used by the process; they should also be remembered.
+    - Protection: protected area inside stack and heap so that others processes have no access to it.
+
+Preemption:
+    - forcefully stopping the execution of a proces by CPU.
+CPU Scheduling:
+    - Done by a scheduler program, which is part of OS.
+Timestamp:
+    - maximum amount of time a process can take to be executed without any preemption.
